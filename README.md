@@ -32,15 +32,11 @@
    git clone https://github.com/munraitoo13/godo-list
    ```
 
-2. **Build the app**:
+2. **Run the app**:
 
    ```bash
-   go build ./cmd
+   go run ./cmd
    ```
-
-3. **Execute the cmd.exe file**
-
-And enjoy! Easy, isn't it?
 
 <h2 align="center">📂 Project Structure 📂</h2>
 
