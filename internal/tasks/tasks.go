@@ -59,16 +59,16 @@ func (status Status) ToString() string {
 }
 
 // read input
-func readInput(prompt string) (string, error) {
+func readInput(prompt string) string {
 	// starts the reader
 	reader := bufio.NewReader(os.Stdin)
 
 	// command prompt and input reader
 	fmt.Print(prompt)
-	input, err := reader.ReadString('\n')
+	input, _ := reader.ReadString('\n')
 
 	// returns the input already trimmed
-	return strings.TrimSpace(input), err
+	return strings.TrimSpace(input)
 }
 
 // read index input
@@ -124,7 +124,10 @@ func (tasks *Tasks) View() error {
 	task := *tasks
 
 	// task index input
-	index, _ := tasks.readIndex("Select the task number to be viewed: ")
+	index, err := tasks.readIndex("Select the task number to be viewed: ")
+	if err != nil {
+		return err
+	}
 
 	// clears screen
 	utils.ClearScreen()
@@ -144,8 +147,8 @@ func (tasks *Tasks) View() error {
 // add new task
 func (tasks *Tasks) CreateTask() error {
 	// task's title and decription
-	title, _ := readInput("Task's title: ")
-	description, _ := readInput("Task's description: ")
+	title := readInput("Task's title: ")
+	description := readInput("Task's description: ")
 
 	// set the local task values
 	task := Task{
@@ -171,11 +174,14 @@ func (tasks *Tasks) EditTask() error {
 	task := *tasks
 
 	// reads index input
-	index, _ := tasks.readIndex("Select the task to be edited: ")
+	index, err := tasks.readIndex("Select the task to be edited: ")
+	if err != nil {
+		return err
+	}
 
 	// title and description inputs
-	title, _ := readInput("New title: ")
-	description, _ := readInput("New description: ")
+	title := readInput("New title: ")
+	description := readInput("New description: ")
 
 	// set the task's title and description
 	task[index].Title = title
@@ -193,10 +199,13 @@ func (tasks *Tasks) SetStatus() error {
 	task := *tasks
 
 	// task index input
-	index, _ := tasks.readIndex("Task index to be edited: ")
+	index, err := tasks.readIndex("Task index to be edited: ")
+	if err != nil {
+		return err
+	}
 
 	// new status
-	statusInput, _ := readInput("New task status: ")
+	statusInput := readInput("New task status: ")
 
 	// switch to change the task's status based on input
 	switch strings.ToLower(statusInput) {
@@ -229,7 +238,10 @@ func (tasks *Tasks) DeleteTask() error {
 	task := *tasks
 
 	// task index input
-	index, _ := tasks.readIndex("Task index to be deleted: ")
+	index, err := tasks.readIndex("Task index to be deleted: ")
+	if err != nil {
+		return err
+	}
 
 	// appends all tasks except the one to be deleted
 	*tasks = append(task[:index], task[index+1:]...)
@@ -242,8 +254,14 @@ func (tasks *Tasks) DeleteTask() error {
 
 // delete all tasks
 func (tasks *Tasks) DeleteAllTasks() error {
+	if len(*tasks) == 0 {
+		utils.ClearScreen()
+		fmt.Println("No tasks to delete.")
+		return nil
+	}
+
 	// confirmation input
-	confirmation, _ := readInput("Are you sure you want to delete all tasks? (yes/no): ")
+	confirmation := readInput("Are you sure you want to delete all tasks? (yes/no): ")
 
 	// switch to check if the user wants to delete all tasks
 	switch strings.ToLower(confirmation) {
