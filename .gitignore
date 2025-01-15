@@ -3,3 +3,4 @@
 Makefile
 .goreleaser.yaml
 bin/
+dist/
