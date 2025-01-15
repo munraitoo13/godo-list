@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
 </div>
 
-<h2 align="center">Built With</h2>
+<h2 align="center">Features</h2>
 
 - Lightweight and fast
 - Easy-to-use CLI commands
