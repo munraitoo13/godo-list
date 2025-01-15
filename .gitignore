@@ -2,3 +2,4 @@
 *.exe
 Makefile
 .goreleaser.yaml
+bin
