@@ -22,7 +22,6 @@
 - Lightweight and fast
 - Easy-to-use CLI commands
 - JSON-based storage for portability
-- Customizable task statuses
 - Minimalistic and intuitive design
 
 <h2 align="center">Getting Started</h2>
