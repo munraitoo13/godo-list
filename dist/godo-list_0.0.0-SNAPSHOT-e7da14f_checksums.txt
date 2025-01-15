@@ -1,0 +1,6 @@
+ceaaba0d55f02150e700bbf8fac060868697bd983cde57dce5ac4984d98e127e  godo-list_0.0.0-SNAPSHOT-e7da14f_darwin_amd64v2.tar.gz
+4965de488406035bf5c0e602eb755f76991bf84126ca833e8cbafb463d5b4d33  godo-list_0.0.0-SNAPSHOT-e7da14f_darwin_arm64.tar.gz
+bd355509e3194658b67e23983d30d76b3536dcbb1f750b9cce6e78d0edc4daf5  godo-list_0.0.0-SNAPSHOT-e7da14f_linux_amd64v2.tar.gz
+efcb7d1a9a47a06ac07f0d8bc880df7f94a20de124226d43d8eb5192a5c55195  godo-list_0.0.0-SNAPSHOT-e7da14f_linux_arm64.tar.gz
+5242bc3eae3c4f613c089d9ccceed166e48a7aaff7513b596e6e3b6e3695e6a5  godo-list_0.0.0-SNAPSHOT-e7da14f_windows_amd64v2.tar.gz
+f435113196fd218ef473e4905c07be34b29183a431fc1b2b0ddc4752c524a641  godo-list_0.0.0-SNAPSHOT-e7da14f_windows_arm64.tar.gz
