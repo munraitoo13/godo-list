@@ -17,13 +17,6 @@
   <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
 </div>
 
-<h2 align="center">Features</h2>
-
-- Lightweight and fast
-- Easy-to-use CLI commands
-- JSON-based storage for portability
-- Minimalistic and intuitive design
-
 <h2 align="center">Getting Started</h2>
 
 ### How Do I Download the CLI?
@@ -34,54 +27,16 @@ Simply head to the [releases](https://github.com/munraitoo13/godo-list/releases)
 
 Here are the available commands:
 
-- **View Task**: To view details about a task, type:
-
-
-  ```bash
-  view, then <task_index>
-  ```
-- **Add Task**: Add a new task with:
-
-
-  ```bash
-  add, then <task_description>
-  ```
-- **Edit Task**: Modify an existing task using:
-
-
-  ```bash
-  edit, then <task_index>
-  ```
-- **Change Task's Status**: Update the status of a task with:
-
-
-  ```bash
-  status, then <task_index> and <done || doing || pending>
-  ```
-- **Delete Task**: Remove a task by typing:
-
-
-  ```bash
-  delete, then <task_index>
-  ```
-- **Delete All Tasks**: Start fresh with:
-
-
-  ```bash
-  delete all
-  ```
-- **Clear Terminal**: Clear the screen using:
-
-
-  ```bash
-  clear
-  ```
-- **Exit**: Exit the application with:
-
-
-  ```bash
-  exit
-  ```
+```plaintext
+view          # Type "view", hit Enter, then enter <task_index>
+add           # Type "add", hit Enter, then enter <task_description>
+edit          # Type "edit", hit Enter, then enter <task_index>
+status        # Type "status", hit Enter, then enter <task_index> and <task_status>
+delete        # Type "delete", hit Enter, then enter <task_index>
+delete all    # Type "delete all" to remove all tasks
+clear         # Type "clear" to clear the terminal screen
+exit          # Type "exit" to exit the application
+```
 
 ### Building the Project Yourself
 
@@ -124,14 +79,17 @@ godo-list/
 └── tasks.json     # Storage file for tasks
 ```
 
-<h2 align="center">Contributing</h2>
+<div align="center">
+  <h2 align="center">Contributing</h2>
 
-<p>
+  <p>
   Contributions are what make the open-source community an amazing place to learn and create. Any contributions will be greatly appreciated.
-</p>
-<p>
+  </p>
+  
+  <p>
   If you have a suggestion that would make this project better, please fork the repo and create a pull request. You can also simply open an issue with the <b>suggestion</b> tag. You can find more info on how to contribute to a project <a href="https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project">here</a>.
-</p>
+  </p>
+</div>
 
 <div align="center">
   <h2>Contact</h2>
